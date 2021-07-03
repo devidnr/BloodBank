@@ -1,0 +1,16 @@
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+        <div><a  class="navbar-brand">
+            <img src="assets/images/logo.jpg"class="rounded-circle">
+             Blood Bank</a></div>
+        <ul class="navbar-nav navbar-collapse justify-content-end">
+            <li>
+                <a *ngIf="isLoggedIn" class="nav-link" href="/logout" (click)=handleLogout()>
+                  <p style="color:white;">  Logout </p>
+               </a>
+            </li>
+          
+        </ul>
+    </nav>
+  </header>
+   

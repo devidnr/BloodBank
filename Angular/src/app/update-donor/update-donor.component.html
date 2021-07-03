@@ -1,0 +1,45 @@
+<app-menu></app-menu>
+<div class="col-md-4 offset-md-3">
+    <h3>Register</h3>
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" class="form-control" id="mail"
+            [(ngModel)]="donor.userName" name="mail">
+            <label>Email Id</label>
+            <input type="text" class="form-control" id="userName"
+            [(ngModel)]="donor.email" name="userName">
+            
+            
+            <label>Blood</label>
+                <select id="blood" [(ngModel)]="donor.bloodName" name="blood" >
+                  <option *ngFor="let group of groups" value={{group.name}}>{{group.name}}</option>
+                  
+                </select><br>
+            <label>Gender</label>
+                <select id="gender" [(ngModel)]="donor.gender" name="gender" >
+                  <option *ngFor="let gender of genders" value={{gender.name}}>
+                      {{gender.name}}</option>
+                  
+                </select><br>
+                <label>Health</label>
+                <select id="health" [(ngModel)]="donor.health" name="health" >
+                  <option *ngFor="let health of healths" value={{health.name}}>
+                      {{health.name}}</option>
+                  
+                </select><br>
+            <label>Mobile</label>
+            <input type="text" class="form-control" id="mobile"
+            [(ngModel)]="donor.mobile" name="mobile">
+            <label>City</label>
+            <input type="text" class="form-control" id="city"
+            [(ngModel)]="donor.city" name="city">
+    
+        <label>Another issues</label>
+        <input type="text" class="form-control" id="issues"
+        [(ngModel)]="donor.issues" name="issues">
+    </div>
+        <button class="btn btn-success" type="submit">Submit</button>
+    </form>
+    </div>
+    
