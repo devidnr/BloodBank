@@ -1,0 +1,32 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Mail</th>
+            <th>Blood Group</th>
+            <th>Role</th>
+            <th>Mobile</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+       
+        <tr *ngFor="let user of users">
+           
+            <td>{{user.mail}}</td>
+            <td>{{user.userName}}</td>
+            <td>{{user.blood}}</td> 
+                <td>{{user.role}}</td> 
+                <td>{{user.mobile}}</td> 
+             <td><button (click)="updateUser(user.userName)" class="btn btn-info">
+                Update
+            </button>
+            <button (click)="deleteUser(user.userName)" class="btn btn-danger"
+                style="margin-left: 10px;">
+                delete
+            </button>
+            
+            </td> 
+        </tr>
+    </tbody>
+</table>

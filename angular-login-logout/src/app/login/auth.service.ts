@@ -12,7 +12,7 @@ export class AuthenticationService {
 
   public username: String;
   public password: String;
-
+  public admin:String;
   constructor(private http: HttpClient) {
 
   }

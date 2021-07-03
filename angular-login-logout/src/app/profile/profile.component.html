@@ -1,0 +1,43 @@
+<app-menu></app-menu>
+
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title><h1>MY Profile</h1></mat-card-title>
+  </mat-card-header>
+  <img mat-card-image src="assets/images/card.jpg" class="rounded-circle" >
+ <hr>
+  <mat-card-content>
+    <div class="center">
+      <table >
+        <tr>
+          <td style="text-align: right;"> User Name :</td>
+          <td style="text-align: left;"> {{user.userName}}   </td>
+        </tr>
+        <tr>
+          <td style="text-align: right;">  Mail:</td>
+          <td style="text-align: left;">   {{user.mail}}   </td>
+        </tr>
+        <tr>
+          <td style="text-align: right;"> Blood Group:</td>
+          <td style="text-align: left;"> {{user.blood}}   </td>
+        </tr>
+        <tr>
+          <td style="text-align: right;"> Role:</td>
+          <td style="text-align: left;">   {{user.role}}  </td>
+        </tr>
+        <tr>
+          <td style="text-align: right;">  Mobile:</td>
+          <td style="text-align: left;"> {{user.mobile}}   </td>
+        </tr>
+      </table>
+    </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button  (click)="updateUser(user.userName)" class="btn btn-info l" >Update</button>
+    &nbsp;  <button mat-button (click)="gotoList()" class="btn btn-primary">Back</button>
+    </mat-card-actions>
+</mat-card>
+
+    
+
+

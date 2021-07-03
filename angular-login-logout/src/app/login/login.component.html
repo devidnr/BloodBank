@@ -1,5 +1,10 @@
 <app-menu></app-menu>
-<div class="container col-lg-6">
+<div style="width: 100%; overflow: hidden;">
+  <div style="width: 50%; float: left;" class="left">
+  <img src="assets/images/bloodbank.jpg" >
+</div>
+ <div style="width: 50%; float: right;margin:0px;">
+ <div class="container col-lg-10 ">
     <h1 class="text-center">Login</h1>
     <div class="card">
       <div class="card-body">
@@ -16,9 +21,14 @@
             <input type="password" class="form-control" [(ngModel)]="password" id="password" placeholder="Enter password"
               name="password">
           </div>
-          <button (click)=handleLogin() class="btn btn-success">Login</button>
+          <button (click)=handleLogin() class="btn btn-success button">Login</button>
+      <br>
+      <br>
+      <div class="text-center">
+          New User? <a href="/signup">Sign up</a></div>
         </form>
       </div>
+</div>
     </div>
   </div>
-  
+</div>

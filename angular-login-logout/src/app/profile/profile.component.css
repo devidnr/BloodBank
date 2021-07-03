@@ -1,0 +1,32 @@
+.example-card {
+    max-width: 350px;
+ margin-left: 33%;
+ text-align: center;
+  }
+img{
+    width: 50%;
+}  
+  .example-header-image {
+   
+    background-size: cover;
+  }
+  h1{
+      text-align: center;
+  }
+  .m{
+      align-items: center;
+      text-align: center;
+  }
+  mat-card-title{
+      text-align: center;
+  }
+  .drawer{
+width: 30%;
+  }
+  .con{
+      height: 450px;
+  }
+  .center {
+    margin: 20%;
+  }
+  

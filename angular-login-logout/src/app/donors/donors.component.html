@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-sm bg-info navbar-dark">
+    <ul class="navbar-nav">
+        <li class="nav-item" > 
+               <input class="form-control" type="text" name="bloodName" [(ngModel)]="bloodName"
+                (ngModelChange)="Search()" placeholder="Enter BloodGroup Search">      
+        </li>
+     </ul>
+    </nav>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>User Name</th>
+            <th>Blood Group</th>
+            <th>City</th>
+            <th  >Actions</th>
+
+        </tr>
+    </thead>
+    <tbody>
+       
+        <tr *ngFor="let donor of donors">
+           
+            <td>{{donor.userName}}</td>
+
+            <td>{{donor.bloodName}}</td>
+            <td>{{donor.city}}</td>
+
+            
+            <td> <button *ngIf="allow" (click)="updateDonor(donor.email)" class="btn btn-info">
+                Update
+            </button>
+            <button *ngIf="allow" (click)="deleteDonor(donor.email)" class="btn btn-danger"
+                style="margin-left: 10px;">
+                delete
+            </button> 
+          
+            <button (click)="donorDetails(donor.email)" class="btn btn-info"
+                style="margin-left: 10px;">
+                Donor Details
+            </button>
+            </td> 
+        </tr>
+    </tbody>
+</table>

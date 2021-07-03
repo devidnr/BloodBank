@@ -1,0 +1,32 @@
+<app-menu></app-menu>
+<mat-drawer-container class="example-container">
+    <mat-drawer mode="side" opened class="drawer">
+        <mat-nav-list>
+          <a [routerLink]="['/profile']">
+            <img src="assets/images/download.png"  >
+                    
+                  <mat-divider></mat-divider>
+                  <h2  >Welcome  {{user.mail|uppercase}}</h2></a>
+                  
+                    <button *ngIf="allow" (click)="toggleSideBar()"class="btn btn-primary">Users</button><br>
+                  <button (click)="isdonor()" class="btn btn-info">Blood Donors</button><br>
+                  <button (click)="isbank()" class="btn btn-primary">About Blood Bank</button>
+              </mat-nav-list>
+        </mat-drawer>
+    <mat-drawer-content class="content"> 
+      <ng-template [ngIf]="donate">
+        <h1>If you interest in donate blood please register <a [routerLink]="['/donor']">Click here</a>
+        (if you already register please ignore) </h1>       
+        </ng-template> 
+
+        <ng-template [ngIf]="opened">
+            <app-users></app-users>
+          </ng-template>   
+          <ng-template [ngIf]="donor">
+            <app-donors></app-donors>
+          </ng-template>   
+          <ng-template [ngIf]="check">
+            <app-bank></app-bank> 
+              </ng-template> 
+         </mat-drawer-content>
+  </mat-drawer-container>
