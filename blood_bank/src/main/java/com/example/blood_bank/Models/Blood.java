@@ -1,11 +1,15 @@
 package com.example.blood_bank.Models;
 
+import java.util.Date;
+
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
 
 @Entity
 @Table(name="blood")
@@ -33,6 +37,8 @@ private String health;
     private String userName ;
     @Column(name = "mobile", nullable = false)
 private String mobile;
+@Temporal(javax.persistence.TemporalType.DATE)
+private Date dateoperation = new java.sql.Date(new java.util.Date().getTime());
     public String getBloodName() {
         return bloodName;
     }
@@ -79,6 +85,14 @@ private String mobile;
     }
     public void setCity(String city) {
         this.city = city;
+    }
+    
+    
+    public Date getDateoperation() {
+        return dateoperation;
+    }
+    public void setDateoperation(Date dateoperation) {
+        this.dateoperation = dateoperation;
     }
     @Override
     public String toString() {

@@ -78,6 +78,7 @@ public class UserController {
     BloodRepository bloodRepository;
     @GetMapping("/blood")
     public List<Blood> getAllbloods(){
+        bloodRepository.deleteRecord();
         return bloodRepository.findAll();
     }
     @PostMapping("/bloods")

@@ -1,11 +1,25 @@
-<nav class="navbar navbar-expand-sm bg-info navbar-dark">
-    <ul class="navbar-nav">
+<!-- <nav class=" navbar navbar-expand-sm bg-info navbar-dark">
+   <ul class="navbar-nav">
+        <li class="nav-item" > 
+          
+     </li>
+     <span class="example-spacer"></span>
         <li class="nav-item" > 
                <input class="form-control" type="text" name="bloodName" [(ngModel)]="bloodName"
                 (ngModelChange)="Search()" placeholder="Enter BloodGroup Search">      
         </li>
      </ul>
-    </nav>
+    </nav> -->
+    <p>
+        <mat-toolbar color="primary">
+            <a [routerLink]="['/donor']"> <button *ngIf="allow" mat-raised-button color="accent">ADD DONOR</button></a>
+     
+        <span class="example-spacer"></span>
+        <input class="form-control" type="text" name="bloodName" [(ngModel)]="bloodName"
+                (ngModelChange)="Search()" placeholder="Enter BloodGroup Search">  
+      </mat-toolbar>
+      </p>
+      
 <table class="table table-striped">
     <thead>
         <tr>

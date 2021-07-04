@@ -15,8 +15,10 @@
         </mat-drawer>
     <mat-drawer-content class="content"> 
       <ng-template [ngIf]="donate">
-        <h1>If you interest in donate blood please register <a [routerLink]="['/donor']">Click here</a>
-        (if you already register please ignore) </h1>       
+        <div class="center">
+          <div class="middle">
+          <img src="assets/images/logo.jpg"class="rounded-circle"></div>
+        <h1 style="color:rgb(31, 74, 190)">Welcome to Blood Bank </h1>    </div>   
         </ng-template> 
 
         <ng-template [ngIf]="opened">

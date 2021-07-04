@@ -10,14 +10,14 @@ import { UserService } from '../user.service';
 })
 export class UpdateUserComponent implements OnInit {
   groups=[
-    {id:1,name:"O +ve"},
-    {id:2,name:"O -ve"},
-    {id:3,name:"A +ve"},
-    {id:4,name:"A -ve"},
-    {id:5,name:"B +ve"},
-    {id:6,name:"B -ve"},
-    {id:7,name:"AB +ve"},
-    {id:8,name:"AB -ve"},
+    {id:1,name:"O positive"},
+    {id:2,name:"O negative"},
+    {id:3,name:"A positive"},
+    {id:4,name:"A negative"},
+    {id:5,name:"B positive"},
+    {id:6,name:"B negative"},
+    {id:7,name:"AB positive"},
+    {id:8,name:"AB negative"},
   ]
   roles=[
     {id:1,name:"Admin"},

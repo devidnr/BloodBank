@@ -19,6 +19,7 @@ public class BloodController {
     BloodRepository bloodRepository;
     @GetMapping("/blood")
     public List<Blood> getAllbloods(){
+        
         System.out.print(bloodRepository.findAll());
         return bloodRepository.findAll();
     }
